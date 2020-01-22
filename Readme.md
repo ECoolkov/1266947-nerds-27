@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Elena Kulkova](https://up.htmlacademy.ru/htmlcss/27/user/1266947).
-* Наставник: [Артем Макаров](https://htmlacademy.ru/profile/deepsick).
+* Наставник: [Артем Макаров](https://up.htmlacademy.ru/htmlcss/27/user/429879).
 
 ---
 
