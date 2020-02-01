@@ -22,49 +22,51 @@
 <main>
   <h1>Магазин готовых шаблонов</h1>
   <section class="filters">
-    <fieldset>
-      <legend>сетка:</legend>
-      <ul>
-        <li>
-          <input type="radio" name="grid" value="" id="filter-responsive" checked>
-          <label for="filter-responsive">Адаптивная</label>
-        </li>
-        <li>
-          <input type="radio" name="grid" value="" id="filter-stable">
-          <label for="filter-stable">Фиксированная</label>
-        </li>
-        <li>
-          <input type="radio" name="grid" value="" id="filter-flexible">
-          <label for="filter-flexible">Резиновая</label>
-        </li>
-      </ul>
-    </fieldset>
-    <fieldset>
-      <legend>особенност:и</legend>
-      <ul>
-        <li>
-          <input type="checkbox" name="slider" id="filter-slider" checked>
-          <label for="filter-slider">Слайдер</label>
-        </li>
-        <li>
-          <input type="checkbox" name="advantages-block" id="filter-advantages-block">
-          <label for="filter-advantages-block">Блок преимуществ</label>
-        </li>
-        <li>
-          <input type="checkbox" name="news" id="filter-news" checked>
-          <label for="filter-news">Новости</label>
-        </li>
-        <li>
-          <input type="checkbox" name="gallery" id="filter-gallery">
-          <label for="filter-gallery">Галерея</label>
-        </li>
-        <li>
-          <input type="checkbox" name="cart" id="filter-cart">
-          <label for="filter-cart">Корзина</label>
-        </li>
-      </ul>
-    </fieldset>
-    <button>показать</button>
+    <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+        <legend>сетка:</legend>
+        <ul>
+          <li>
+            <input type="radio" name="grid" value="responsive" id="filter-responsive" checked>
+            <label for="filter-responsive">Адаптивная</label>
+          </li>
+          <li>
+            <input type="radio" name="grid" value="stable" id="filter-stable">
+            <label for="filter-stable">Фиксированная</label>
+          </li>
+          <li>
+            <input type="radio" name="grid" value="flexible" id="filter-flexible">
+            <label for="filter-flexible">Резиновая</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>особенност:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="slider" id="filter-slider" checked>
+            <label for="filter-slider">Слайдер</label>
+          </li>
+          <li>
+            <input type="checkbox" name="advantages-block" id="filter-advantages-block">
+            <label for="filter-advantages-block">Блок преимуществ</label>
+          </li>
+          <li>
+            <input type="checkbox" name="news" id="filter-news" checked>
+            <label for="filter-news">Новости</label>
+          </li>
+          <li>
+            <input type="checkbox" name="gallery" id="filter-gallery">
+            <label for="filter-gallery">Галерея</label>
+          </li>
+          <li>
+            <input type="checkbox" name="cart" id="filter-cart">
+            <label for="filter-cart">Корзина</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button>показать</button>
+    </form>
   </section>
   <section class="catalog">
     <h2 class="visually-hidden">список макетов</h2>
@@ -89,41 +91,42 @@
       </li>
     </ul>
   </section>
-</main>
-<footer>
-  <section class="footer-map">
-    <h3 class="visually-hidden">Как до нас добраться</h3>
+  <section class="map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
     <a href="#"><img src="img/map.jpg" width="1440" height="416"
                      alt="Офис компании Нёрдс по адресу ул. Большая Конюшенная19/8, Санкт-Петербург"></a>
   </section>
   <section class="feedback-popup">
-    <h3>Напишите нам</h3>
+    <h2>Напишите нам</h2>
     <form class="user" method="post" action="https://echo.htmlacademy.ru">
       <p>
         <label for="user-name">Ваше имя:</label>
         <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
       </p>
       <p>
-        <label for="user-email">Ваше e-mail:</label>
-        <input id="user-email" type="text" name="email" placeholder="email@example.com">
+        <label for="email">Ваш e-mail:</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com">
       </p>
       <p>
-        <label for="email-text">Текст письма:</label>
-        <input id="email-text" type="text" name="email-text" placeholder="В свободной форме">
+        <label>Текст письма:
+          <textarea placeholder="В свободной форме"></textarea>
+        </label>
       </p>
       <button type="submit">отправить</button>
     </form>
-    <button type="button">закрыть</button>
+    <button class="visually-hidden" type="button">закрыть</button>
   </section>
+</main>
+<footer>
   <ul>
     <li>
-      <a href="#"></a>
+      <a href="#">Вконтакте</a>
     </li>
     <li>
-      <a href="#"></a>
+      <a href="#">Фейсбук</a>
     </li>
     <li>
-      <a href="#"></a>
+      <a href="#">Инстаграм</a>
     </li>
   </ul>
   <b>Давайте дружить, это выгодно</b>
