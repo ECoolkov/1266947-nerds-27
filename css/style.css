@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #283136;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Header*/
+.main-nav {
+  line-height: 1.88;
+  background-color: #eeeeee;
+  color: black;
+}
+
+.site-nav,
+.header-cart {
+  list-style: none;
+}
+
+.site-nav a,
+.header-cart a {
+  color: black;
+  width: 61px;
+  height: 15px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.header-cart a:hover,
+.header-cart a:focus {
+  background-color: lightblue;
+}
+
+/*Main*/
+
+.main-services li {
+  list-style: none;
+}
+
+.main-services-header {
+  /*width: 135px;*/
+  /*height: 23px;*/
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.main-services-logos {
+  line-height: 1.5;
+  color: #283136;
+  /*width: 213px;*/
+  /*height: 40px;*/
+}
+
+.websites-button {
+  /*width: 160px;*/
+  /*height: 50px;*/
+  background-color: tomato;
+  color: white;
+}
+
+.applications-button {
+  /*width: 160px;*/
+  /*height: 50px;*/
+  background-color: #00ca74;
+  color: white;
+}
+
+.demonstrations-button {
+  /*width: 160px;*/
+  /*height: 50px;*/
+  background-color: #efc84a;
+  color: white;
+}
+
+/*Footer*/
+.main-footer {
+  background-color: white;
+}
+
+.footer-campaign {
+  /*width: 545px;*/
+  /*height: 35px;*/
+  color: black;
+  font-size: 36px;
+}
+
+.footer-offer {
+  /*width: 343px;*/
+  /*height: 16px;*/
+  line-height: 1.38;
+  color: #444444;
+}
+
+.footer-social {
+  text-align: left;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.feedback-popup {
+  display: none;
+}
+
+/*inner.html*/
+
+.page-title {
+  font-size: 55px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+  background-color: #eeeeee;
+  color: #000000;
+}
+
+
+.peculiarities-filter-legend {
+  /*width: 135px;*/
+  /*height: 14px;*/
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: 1.67;
+  color: #000000;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.filters-form fieldset {
+  border: none;
+}
+
+.filters-form legend {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.67;
+  color: #000000;
+}
+
+.filters-form ul {
+  list-style: none;
+  line-height: 1.25;
+}
+
+.filters-button {
+  background-color: #eeeeee;
+}
+
+.filters-button-text {
+  text-transform: uppercase;
+  line-height: 1.13;
+  color: #000000;
+}
+
+label {
+  font-size: 16px;
+  line-height: 1.25;
+  color: gray();
+}
