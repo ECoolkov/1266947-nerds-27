@@ -9,113 +9,126 @@
 <body class="inner-page">
 <header class="main-header">
   <nav class="main-nav">
-    <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="160" height="65"
-                                                       alt="Логотип нёрдс"></a>
-    <ul class="site-nav">
-      <li><a href="#">студия</a></li>
-      <li><a href="#">клиенты</a></li>
-      <li><a class="site-navigation-current">магазин</a></li>
-      <li><a href="#">контакты</a></li>
-    </ul>
-    <ul class="header-cart">
-      <li><a class="cart-link" href="#">корзина</a></li>
-    </ul>
+    <div class="main-nav-wrapper">
+      <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="160" height="65" alt="Логотип нёрдс"></a>
+      <ul class="site-nav">
+        <li class="site-nav-item"><a href="#">студия</a></li>
+        <li class="site-nav-item"><a href="#">клиенты</a></li>
+        <li class="site-nav-item"><a class="site-navigation-current">магазин</a></li>
+        <li class="site-nav-item"><a href="#">контакты</a></li>
+      </ul>
+      <ul class="header-cart">
+        <li class="header-cart-link"><a class="cart-link" href="#">корзина</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main>
   <h1 class="page-title">Магазин готовых шаблонов</h1>
-  <section class="filters">
-    <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset>
-        <legend>сетка:</legend>
-        <ul>
-          <li class="grid-filter-option">
-            <input type="radio" name="grid" value="responsive" id="filter-responsive" checked>
-            <label for="filter-responsive">Адаптивная</label>
-          </li>
-          <li class="grid-filter-option">
-            <input type="radio" name="grid" value="stable" id="filter-stable">
-            <label for="filter-stable">Фиксированная</label>
-          </li>
-          <li class="grid-filter-option">
-            <input type="radio" name="grid" value="flexible" id="filter-flexible">
-            <label for="filter-flexible">Резиновая</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend class="peculiarities-filter-legend">особенности:</legend>
-        <ul>
-          <li>
-            <input class="filter-input" type="checkbox" name="slider" id="filter-slider" checked>
-            <label for="filter-slider">Слайдер</label>
-          </li>
-          <li>
-            <input class="filter-input" type="checkbox" name="advantages-block" id="filter-advantages-block">
-            <label for="filter-advantages-block">Блок преимуществ</label>
-          </li>
-          <li>
-            <input class="filter-input" type="checkbox" name="news" id="filter-news" checked>
-            <label for="filter-news">Новости</label>
-          </li>
-          <li>
-            <input class="filter-input" type="checkbox" name="gallery" id="filter-gallery">
-            <label for="filter-gallery">Галерея</label>
-          </li>
-          <li>
-            <input class="filter-input" type="checkbox" name="cart" id="filter-cart">
-            <label for="filter-cart">Корзина</label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="filters-button" type="submit"><span class="filters-button-text">показать</span></button>
-    </form>
-  </section>
-  <section class="catalog">
-    <h2 class="visually-hidden">список макетов</h2>
-    <ul class="catalog-list">
-      <li class="catalog-item">
-        <a href="#"><img src="img/sedona.jpg" width="360" height="576" alt="макет седона"></a>
-      </li>
-      <li class="catalog-item">
-        <a href="#"><img src="img/pink.jpg" width="360" height="576" alt="макет пинк"></a>
-      </li>
-      <li class="catalog-item">
-        <a href="#"><img src="img/barbershop.jpg" width="360" height="576" alt="макет барбершоп"></a>
-      </li>
-      <li class="catalog-item">
-        <a href="#"><img src="img/mishka.jpg" width="360" height="576" alt="макет мишка"></a>
-      </li>
-      <li class="catalog-item">
-        <a href="#"><img src="img/aplus.jpg" width="360" height="576" alt="макет аплюс"></a>
-      </li>
-      <li class="catalog-item">
-        <a href="#"><img src="img/kvast.jpg" width="360" height="576" alt="макет кваст"></a>
-      </li>
-    </ul>
-  </section>
-  <section class="map">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
+  <!-- debug -->
+  <section class="sorting"></section>
+  <!-- debug -->
+  <div class="catalog-columns">
+    <div class="filters-container">
+      <section class="price"></section>
+      <section class="filters">
+        <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="filters-fieldset">
+            <legend>сетка:</legend>
+            <ul class="grid-fieldset">
+              <li class="grid-filter-option">
+                <input type="radio" name="grid" value="responsive" id="filter-responsive" checked>
+                <label for="filter-responsive">Адаптивная</label>
+              </li>
+              <li class="grid-filter-option">
+                <input type="radio" name="grid" value="stable" id="filter-stable">
+                <label for="filter-stable">Фиксированная</label>
+              </li>
+              <li class="grid-filter-option">
+                <input type="radio" name="grid" value="flexible" id="filter-flexible">
+                <label for="filter-flexible">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="peculiarities-fieldset">
+            <legend class="peculiarities-filter-legend">особенности:</legend>
+            <ul class="peculiarities-list">
+              <li>
+                <input class="filter-input" type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input class="filter-input" type="checkbox" name="advantages-block" id="filter-advantages-block">
+                <label for="filter-advantages-block">Блок преимуществ</label>
+              </li>
+              <li>
+                <input class="filter-input" type="checkbox" name="news" id="filter-news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input class="filter-input" type="checkbox" name="gallery" id="filter-gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+              <li>
+                <input class="filter-input" type="checkbox" name="cart" id="filter-cart">
+                <label for="filter-cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filters-button" type="submit">показать</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="catalog">
+      <!--      <h2 class="visually-hidden">список макетов</h2>-->
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <a href="#"><img src="img/sedona.jpg" width="360" height="576" alt="макет седона"></a>
+        </li>
+        <li class="catalog-item">
+          <a href="#"><img src="img/pink.jpg" width="360" height="576" alt="макет пинк"></a>
+        </li>
+        <li class="catalog-item">
+          <a href="#"><img src="img/barbershop.jpg" width="360" height="576" alt="макет барбершоп"></a>
+        </li>
+        <li class="catalog-item">
+          <a href="#"><img src="img/mishka.jpg" width="360" height="576" alt="макет мишка"></a>
+        </li>
+        <li class="catalog-item">
+          <a href="#"><img src="img/aplus.jpg" width="360" height="576" alt="макет аплюс"></a>
+        </li>
+        <li class="catalog-item">
+          <a href="#"><img src="img/kvast.jpg" width="360" height="576" alt="макет кваст"></a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <section class="pagination"></section>
+  <section class="catalog-map">
+    <!--    <h2 class="visually-hidden">Как до нас добраться</h2>-->
     <a href="#"><img src="img/map.jpg" width="1440" height="416"
                      alt="Офис компании Нёрдс по адресу ул. Большая Конюшенная19/8, Санкт-Петербург"></a>
   </section>
 </main>
 <footer class="main-footer">
-  <div class="footer-social">
-    <ul>
-      <li>
-        <a class="social-button" href="#"><span class='visually-hidden'>Вконтакте</span></a>
+  <div class="footer-wrapper">
+    <ul class="footer-social">
+      <li class="social-button">
+        <a class="social-button-vk" href="#"><span class='visually-hidden'>Вконтакте</span></a>
       </li>
-      <li>
-        <a class="social-button" href="#"><span class='visually-hidden'>Фейсбук</span></a>
+      <li class="social-button">
+        <a class="social-button-fb" href="#"><span class='visually-hidden'>Фейсбук</span></a>
       </li>
-      <li>
-        <a class="social-button" href="#"><span class='visually-hidden'>Инстаграм</span></a>
+      <li class="social-button">
+        <a class="social-button-insta" href="#"><span class='visually-hidden'>Инстаграм</span></a>
       </li>
     </ul>
+    <div class="footer-offer-container">
+      <b class="footer-campaign">Давайте дружить, это выгодно!</b>
+      <p class="footer-offer">Скидка 10% для друзей из социальных сетей</p>
+    </div>
   </div>
-  <b class="footer-campaign">Давайте дружить, это выгодно!</b>
-  <p class="footer-offer">Скидка 10% для друзей из социальных сетей</p>
 </footer>
 <section class="feedback-popup">
   <h2>Напишите нам</h2>
