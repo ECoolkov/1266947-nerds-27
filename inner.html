@@ -22,14 +22,15 @@
     </ul>
   </nav>
 </header>
-<main class="container">
-  <h1 class="page-title">Магазин готовых шаблонов</h1>
-  <!-- debug -->
+<main>
+  <div class="page-title-wrapper">
+    <h1 class="page-title">Магазин готовых шаблонов</h1>
+  </div>
   <section class="sorting"></section>
-  <!-- debug -->
-  <div class="catalog-columns">
 
+  <div class="catalog-columns">
     <section class="filters">
+      <h2 class="visually-hidden">фильтры</h2>
       <form class="price" action="https://echo.htmlacademy.ru" method="post">
       </form>
       <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
@@ -80,7 +81,7 @@
     </section>
 
     <section class="catalog">
-      <!--      <h2 class="visually-hidden">список макетов</h2>-->
+      <h2 class="visually-hidden">каталог макетов</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
           <a href="#"><img src="img/sedona.jpg" width="360" height="576" alt="макет седона"></a>
@@ -105,7 +106,7 @@
     </section>
   </div>
   <section class="catalog-map">
-    <!--    <h2 class="visually-hidden">Как до нас добраться</h2>-->
+        <h2 class="visually-hidden">Как до нас добраться</h2>
     <a href="#"><img src="img/map.jpg" width="1440" height="416"
                      alt="Офис компании Нёрдс по адресу ул. Большая Конюшенная19/8, Санкт-Петербург"></a>
   </section>
@@ -127,25 +128,29 @@
     <p class="footer-offer">Скидка 10% для друзей из социальных сетей</p>
   </div>
 </footer>
-<section class="feedback-popup">
-  <h2>Напишите нам</h2>
-  <form class="user" method="post" action="https://echo.htmlacademy.ru">
-    <p>
-      <label for="user-name">Ваше имя:</label>
-      <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-    </p>
-    <p>
-      <label for="email">Ваш e-mail:</label>
-      <input id="email" type="email" name="email" placeholder="email@example.com">
-    </p>
-    <p>
-      <label>Текст письма:
-        <textarea placeholder="В свободной форме"></textarea>
-      </label>
-    </p>
-    <button type="submit">отправить</button>
-  </form>
-  <button type="button"><span class="visually-hidden">закрыть</span></button>
-</section>
+<div class="feedback-popup-wrapper">
+  <section class="feedback-popup popup-window">
+    <h2>Напишите нам</h2>
+    <form class="user" method="post" action="https://echo.htmlacademy.ru">
+      <div class="form-fields">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email">Ваш e-mail:</label>
+          <input id="email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label>Текст письма:
+            <textarea placeholder="В свободной форме"></textarea>
+          </label>
+        </p>
+      </div>
+      <button type="submit">отправить</button>
+    </form>
+    <button type="button"><span class="visually-hidden">закрыть</span></button>
+  </section>
+</div>
 </body>
 </html>
