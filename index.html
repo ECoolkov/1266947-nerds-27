@@ -10,7 +10,6 @@
 <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
 <input class="visually-hidden" type="radio" id="product-2" name="toggle">
 <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-
 <header class="main-header">
   <nav class="main-nav container">
     <a class="main-header-logo"><img src="img/logo.svg" width="160" height="65" alt="Логотип нёрдс"></a>
@@ -25,53 +24,41 @@
     </ul>
   </nav>
 </header>
-
 <div class="sliders-wrapper">
-<section class="slider ">
-  <div class="slider-controls">
-    <label for="product-1"></label>
-    <label for="product-2"></label>
-    <label for="product-3"></label>
-  </div>
-  <ul class="slider-list">
-    <li class="slider-item slide" id="slide1">
-      <h3 class="slide-title slide-title-first">
-        Долго, дорого, скрупулезно.
-      </h3>
-      <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-      <a href="#">узнать больше</a>
-    </li>
-    <li class="slider-item slide" id="slide2">
-      <h3 class="slide-title slide-title-second">
-        Любим математику как никто другой
-      </h3>
-      <p>Никакого креатива, только математические формулы
-        для расчета идеальных пропорций.</p>
-      <a href="#">узнать больше</a>
-    </li>
-    <li class="slider-item slide" id="slide3">
-      <h3 class="slide-title slide-title-third">
-        Только ночь, только хардкор
-      </h3>
-      <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-      <a href="#">узнать больше</a>
-    </li>
-  </ul>
-</section>
+  <section class="slider">
+    <div class="slider-controls">
+      <label for="product-1"></label>
+      <label for="product-2"></label>
+      <label for="product-3"></label>
+    </div>
+    <ul class="slider-list">
+      <li class="slider-item slide" id="slide1">
+        <h3 class="slide-title slide-title-first">
+          Долго, дорого, скрупулезно.
+        </h3>
+        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+        <a href="#">узнать больше</a>
+      </li>
+      <li class="slider-item slide" id="slide2">
+        <h3 class="slide-title slide-title-second">
+          Любим математику как никто другой
+        </h3>
+        <p>Никакого креатива, только математические формулы
+          для расчета идеальных пропорций.</p>
+        <a href="#">узнать больше</a>
+      </li>
+      <li class="slider-item slide" id="slide3">
+        <h3 class="slide-title slide-title-third">
+          Только ночь, только хардкор
+        </h3>
+        <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+        <a href="#">узнать больше</a>
+      </li>
+    </ul>
+  </section>
 </div>
 <main>
   <h1 class="visually-hidden">нёрдс</h1>
-<!--  <section class="promo">-->
-<!--    <div class="sliders container">-->
-<!--      <div class="introduction">-->
-<!--        <b>Долго, дорого,-->
-<!--          скрупулезно.</b>-->
-<!--        <p>Математически выверенный дизайн-->
-<!--          для вашего сайта или мобильного приложения.</p>-->
-<!--        <a href="#">узнать больше</a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
   <div class="container">
     <section class="services">
       <h2 class="visually-hidden">сервисы</h2>
@@ -114,18 +101,20 @@
         <img src="img/nerds-picture.jpg" width="360" height="208" alt="картинка нёрдс">
         <p>с 2004 года любим точность во всем:</p>
         <table>
+          <tbody>
+          <tr>
+            <td>146%</td>
+            <td>100%</td>
+            <td>50%</td>
+          </tr>
+          </tbody>
           <thead>
           <tr>
-            <th>146%</th>
-            <th>100%</th>
-            <th>50%</th>
+            <th>Уровень самоотдачи</th>
+            <th>Соблюдение сроков</th>
+            <th>Минимальная предоплата</th>
           </tr>
           </thead>
-          <tr>
-            <td>Уровень самоотдачи</td>
-            <td>Соблюдение сроков</td>
-            <td>Минимальная предоплата</td>
-          </tr>
         </table>
       </div>
     </section>
@@ -165,24 +154,23 @@
   <h2 class="visually-hidden">Напишите нам</h2>
   <form class="user" method="post" action="https://echo.htmlacademy.ru">
     <div class="form-fields">
-    <p>
-      <label for="user-name">Ваше имя:</label>
-      <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-    </p>
-    <p>
-      <label for="email">Ваш e-mail:</label>
-      <input id="email" type="email" name="email" placeholder="email@example.com">
-    </p>
-    <p>
-      <label>Текст письма:
-        <textarea placeholder="В свободной форме"></textarea>
-      </label>
-    </p>
+      <p>
+        <label for="user-name">Ваше имя:</label>
+        <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="email">Ваш e-mail:</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label>Текст письма:
+          <textarea placeholder="В свободной форме"></textarea>
+        </label>
+      </p>
     </div>
     <button type="submit">отправить</button>
   </form>
   <button type="button"><span class="visually-hidden">закрыть</span></button>
 </section>
-
 </body>
 </html>

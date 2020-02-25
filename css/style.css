@@ -104,7 +104,6 @@ input[type="radio"].visually-hidden {
   width: 15px;
   height: 15px;
 
-
   background-image: url('../img/cart-icon.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -133,7 +132,7 @@ input[type="radio"].visually-hidden {
 
 .site-nav a:hover,
 .header-cart a:hover {
-      color: #fb565a;
+  color: #fb565a;
 }
 
 .site-nav a:active,
@@ -144,13 +143,12 @@ input[type="radio"].visually-hidden {
 /*Main*/
 
 .sliders-wrapper {
-  min-width: 1200px;
   margin: 0;
   padding: 0;
 
   background-image: url("../img/slide1.png");
   background-repeat: no-repeat;
-  background-position-x: 66%;
+  background-position-x: 75%;
 
   background-color: #eeeeee;
 
@@ -194,7 +192,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   padding-top: 65px;
 
@@ -202,7 +200,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide {
-display: none;
+  display: none;
 }
 
 .slider-list p {
@@ -589,7 +587,15 @@ table {
   margin-left: 20px;
 }
 
-th {
+thead {
+  text-align: left;
+}
+
+tbody {
+  display: table-header-group;
+}
+
+td {
   font-size: 45px;
   line-height: 10px;
   color: #000000;
@@ -598,7 +604,7 @@ th {
   width: 105px;
 }
 
-td {
+th {
   font-size: 16px;
   line-height: 18px;
   color: #283136;
@@ -618,7 +624,7 @@ td {
 
 
   display: table-cell;
-  vertical-align:middle;
+  vertical-align: middle;
 
   width: 160px;
   height: 48px;
@@ -632,9 +638,10 @@ td {
   color: white;
 }
 
-.service-item-demos a:hover  {
+.service-item-demos a:hover {
   background-color: #eab534;
 }
+
 .service-item-demos a:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #e5a722;
@@ -643,6 +650,7 @@ td {
 .service-item-app a:hover {
   background-color: #00bc6c;
 }
+
 .service-item-app a:active {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   background-color: #00aa62;
@@ -651,6 +659,7 @@ td {
 .service-item-sites a:hover {
   background-color: #e74246;
 }
+
 .service-item-sites a:active {
   background-color: #d7373b;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
@@ -809,7 +818,6 @@ td {
 
   display: none;
 }
-
 
 
 .footer-offer-container {
