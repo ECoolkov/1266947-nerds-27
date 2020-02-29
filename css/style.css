@@ -214,7 +214,8 @@ input[type="radio"].visually-hidden {
 
   width: 360px;
   height: 41px;
-  /*text-align: center;*/
+ display: flex;
+  align-items: center;
 
   font-size: 16px;
   line-height: 24px;
@@ -258,14 +259,14 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label {
   display: inline-block;
+  position: relative;
   width: 18px;
   height: 18px;
-  margin-right: 8px;
+  margin-right: 18px;
 
   vertical-align: top;
 
-  background-color: transparent;
-  border: 2px solid #ffffff;
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -280,11 +281,10 @@ input[type="radio"].visually-hidden {
 #product-1:checked ~ .slider label[for="product-1"],
 #product-2:checked ~ .slider label[for="product-2"],
 #product-3:checked ~ .slider label[for="product-3"] {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
 }
 
 #product-1:checked ~ .slider {
-
   background-image: url("../img/slide1.png");
 }
 
@@ -298,17 +298,11 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
   position: absolute;
-  bottom: 63px;
 
-  left: 49%;
-  top: 300px;
+  left: 46%;
+  top: 302px;
 
-  background-position: 0 0;
   font-size: 0;
-}
-
-.promo {
-  background-color: #eeeeee;
 }
 
 .visually-hidden {
@@ -419,7 +413,7 @@ input[type="radio"].visually-hidden {
   color: #000000;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 38px;;
+  margin-top: 37px;
 }
 
 .ads {
