@@ -7,9 +7,6 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-<input class="visually-hidden" type="radio" id="product-2" name="toggle">
-<input class="visually-hidden" type="radio" id="product-3" name="toggle">
 <header class="main-header">
   <nav class="main-nav container">
     <a class="main-header-logo"><img src="img/logo.svg" width="160" height="65" alt="Логотип нёрдс"></a>
@@ -25,6 +22,9 @@
   </nav>
 </header>
 <div class="sliders-wrapper">
+  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
   <section class="slider">
     <div class="slider-controls">
       <label for="product-1"></label>
@@ -32,14 +32,14 @@
       <label for="product-3"></label>
     </div>
     <ul class="slider-list">
-      <li class="slider-item slide" id="slide1">
+      <li class="slide" id="slide1">
         <h3 class="slide-title slide-title-first">
           Долго, дорого, скрупулезно.
         </h3>
         <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
         <a href="#">узнать больше</a>
       </li>
-      <li class="slider-item slide" id="slide2">
+      <li class="slide" id="slide2">
         <h3 class="slide-title slide-title-second">
           Любим математику как никто другой
         </h3>
@@ -47,7 +47,7 @@
           для расчета идеальных пропорций.</p>
         <a href="#">узнать больше</a>
       </li>
-      <li class="slider-item slide" id="slide3">
+      <li class="slide" id="slide3">
         <h3 class="slide-title slide-title-third">
           Только ночь, только хардкор
         </h3>
@@ -90,7 +90,7 @@
           дизайн-студия из Краснодара. </b>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
           превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <span>Выполняем заказы на разработку:</span>
+        <p class="we-do">Выполняем заказы на разработку:</p>
         <ul class="we-do-list">
           <li>Веб-сайтов любой сложности</li>
           <li>Мобильных приложений для iOS и Android</li>
@@ -101,13 +101,6 @@
         <img src="img/nerds-picture.jpg" width="360" height="208" alt="картинка нёрдс">
         <p>с 2004 года любим точность во всем:</p>
         <table>
-          <tbody>
-          <tr>
-            <td>146%</td>
-            <td>100%</td>
-            <td>50%</td>
-          </tr>
-          </tbody>
           <thead>
           <tr>
             <th>Уровень самоотдачи</th>
@@ -115,16 +108,31 @@
             <th>Минимальная предоплата</th>
           </tr>
           </thead>
+          <tbody>
+          <tr>
+            <td>146%</td>
+            <td>100%</td>
+            <td>50%</td>
+          </tr>
+          </tbody>
         </table>
       </div>
     </section>
     <section class="ads">
       <h2 class="visually-hidden">реклама компаний</h2>
       <ul class="titles-list">
-        <li><a class="title-item title-item-htmlacademy" href="#"></a></li>
-        <li><a class="title-item title-item-borodinski" href="#"></a></li>
-        <li><a class="title-item title-item-pink" href="#"></a></li>
-        <li><a class="title-item title-item-mishka" href="#"></a></li>
+        <li><a href="#">
+          <img class="img-title" src="img/htmlacdemy-logo.png" width="199" height="68" alt="">
+        </a></li>
+        <li><a href="#">
+          <img class="img-title borodinsli" src="img/borodinsli-logo.png" width="209" height="90" alt="">
+        </a></li>
+        <li><a href="#">
+          <img class="img-title pink" src="img/pink-logo.png" width="185" height="52" alt="">
+        </a></li>
+        <li><a href="#">
+          <img class="img-title mishka" src="img/mishka-logo.png"  width="173" height="84" alt="">
+        </a></li>
       </ul>
     </section>
   </div>
