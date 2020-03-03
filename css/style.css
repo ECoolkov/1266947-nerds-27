@@ -1019,15 +1019,10 @@ input[type="checkbox"] {
   border-radius: 2px;
 }
 
-.filter-input-checkbox:checked + label::after {
-  content: "";
-
-  position: absolute;
-  left: -30px;
-
+.filter-input-checkbox:checked + label::before {
   width: 27px;
-  height: 23px;
 
+  border: none;
   background-image: url("../img/checkbox-on.png");
 }
 
