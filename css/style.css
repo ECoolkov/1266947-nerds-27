@@ -281,7 +281,8 @@ input[type="radio"].visually-hidden {
 #product-1:checked ~ .slider label[for="product-1"],
 #product-2:checked ~ .slider label[for="product-2"],
 #product-3:checked ~ .slider label[for="product-3"] {
-  /*background-color: #ffffff;*/
+  background-color: #c1c1c1;
+  border: 10px solid #ffffff;
 }
 
 #product-1:checked ~ .slider {
@@ -760,7 +761,7 @@ th {
 .page-title {
   margin: 0;
   padding: 0;
-  padding-top: 54px;
+  padding-top: 63px;
   font-size: 55px;
   font-weight: 500;
   font-style: normal;
@@ -779,11 +780,10 @@ th {
 
 /*debug*/
 .sorting {
-  width: 1160px;
+  min-width: 1160px;
   margin: 0;
-  margin-top: 105px;
   padding: 0;
-  min-height: 130px;
+  min-height: 93px;
 }
 
 .filters {
@@ -791,7 +791,7 @@ th {
   padding: 0;
   width: 300px;
   display: flex;
-  min-height: 512px;
+  height: 1000px;
 }
 
 .peculiarities-filter-legend {
@@ -804,9 +804,9 @@ th {
 }
 
 .catalog-columns {
-  width: 1159px;
+  width: 1160px;
   margin: 0 auto;
-  margin-top: 59px;
+  /*margin-top: 59px;*/
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -816,16 +816,21 @@ th {
   width: 800px;
   margin: 0;
   padding: 0;
+  margin-left: 141px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-list {
   padding: 0;
   margin: 0;
+  margin-top: 113px;
+  width: 800px;
+  height: 2116px;
 
   display: flex;
   flex-wrap: wrap;
-
-  min-height: 1875px;
 
   list-style: none;
 }
@@ -834,62 +839,217 @@ th {
   width: 360px;
   margin-bottom: 30px;
   margin-right: 40px;
+  padding-top: 40px;
 }
 
 .filters {
   margin: 0;
-  padding: 0 20px;
+  margin-top: 38px;
+  padding: 0;
   width: 300px;
-  min-height: 703px;
   display: flex;
   flex-direction: column;
 }
 
-.price {
-  width: 260px;
-  height: 130px;
+.filter-item {
   margin: 0;
   padding: 0;
-}
 
-
-.filters-form fieldset {
+  /*width: 259px;*/
+  /*height: 260px;*/
   border: none;
 }
 
-.filters-fieldset,
-.peculiarities-fieldset,
-.grid-fieldset,
-.peculiarities-list {
-  margin: 0;
+.range-controls {
+  position: relative;
+
+  height: 80px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .toggle {
+  width: 20px;
+  height: 20px;
   padding: 0;
+
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .slider label[for="product-1"]::before,
+#product-2:checked ~ .slider label[for="product-2"]::before,
+#product-3:checked ~ .slider label[for="product-3"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 80px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+/*slider*/
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .grid-fieldset li {
   margin-top: 15px;
 }
 
-.peculiarities-fieldset {
-  margin-top: 60px;
-}
-
-.peculiarities-list li {
+.filter-option {
   margin-top: 17px;
+  list-style: none;
+  padding-left: 35px;
 }
 
-.filters-fieldset {
-  margin-top: 57px;
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
 }
 
-.filters-form {
-  width: 260px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #283136;
 }
 
-.filters-form legend {
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid #4d4d4d;
+  border-radius: 2px;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -30px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.png");
+}
+
+.filter-input-checkbox:not(:hover):not(:active):not(:focus) + label::after {
+  opacity: 40%;
+}
+
+.filter-input-checkbox:not(:hover):not(:active):not(:focus) + label::before {
+  opacity: 40%;
+}
+
+.filter-input:disabled + label {
+  color: rgba(40, 49, 54, 0.3);
+  opacity: 0.1;
+}
+
+.catalog {
+  width: 700px;
+}
+
+.filter legend {
+  border: none;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -898,9 +1058,19 @@ th {
   width: 260px;
 }
 
-.filters-form ul {
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-top: 59px;
+
+  border: none;
+}
+
+.filter ul {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
-  line-height: 1.25;
 }
 
 .filters-button {
@@ -909,7 +1079,7 @@ th {
   border: none;
   width: 260px;
   height: 50px;
-  margin-top: 60px;
+  margin-top: 41px;
   border-radius: 3px;
   font-style: normal;
   font-size: 16px;
@@ -919,10 +1089,20 @@ th {
   background-color: #eeeeee;
 }
 
+.filters-button:hover {
+  background-color: #dfdfdf;
+}
+
+.filters-button:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d5d5d5;
+}
+
 label {
   font-size: 16px;
   line-height: 1.25;
   color: gray;
+  padding-left: 15px;
 }
 
 .pagination {
