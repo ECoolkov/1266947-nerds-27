@@ -42,41 +42,45 @@
               <div class="toggle toggle-min"></div>
               <div class="toggle toggle-max"></div>
             </div>
-            </div>
-            <div class="price-controls">
-              <label class="min-price">от <input name="min-price" type="number" value="0"></label>
-              <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
-            </div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+            <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+          </div>
         </fieldset>
       </form>
 
       <form class="filter" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <legend>сетка:</legend>
-          <ul class="grid-fieldset">
-            <li class="grid-filter-option">
-              <input class="filter" type="radio" name="grid" value="responsive" id="filter-responsive" checked>
+          <ul>
+            <li class="filter-option">
+              <input class="filter-input filter-input-radio" type="radio" name="grid" value="responsive"
+                     id="filter-responsive" checked>
               <label for="filter-responsive">Адаптивная</label>
             </li>
-            <li class="grid-filter-option">
-              <input type="radio" name="grid" value="stable" id="filter-stable">
+            <li class="filter-option">
+              <input class="filter-input filter-input-radio" type="radio" name="grid" value="stable" id="filter-stable">
               <label for="filter-stable">Фиксированная</label>
             </li>
-            <li class="grid-filter-option">
-              <input type="radio" name="grid" value="flexible" id="filter-flexible">
+            <li class="filter-option">
+              <input class="filter-input filter-input-radio" type="radio" name="grid" value="flexible"
+                     id="filter-flexible">
               <label for="filter-flexible">Резиновая</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
-          <legend class="peculiarities-filter-legend">особенности:</legend>
+          <legend>особенности:</legend>
           <ul>
             <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider"
+                     checked>
               <label for="filter-slider">Слайдер</label>
             </li>
             <li class="filter-option">
-              <input class="filter-input filter-input-checkbox" type="checkbox" name="advantages-block" id="filter-advantages-block">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="advantages-block"
+                     id="filter-advantages-block">
               <label for="filter-advantages-block">Блок преимуществ</label>
             </li>
             <li class="filter-option">
@@ -101,25 +105,33 @@
       <h2 class="visually-hidden">каталог макетов</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
-          <a href="#"><img src="img/sedona.jpg" width="360" height="576" alt="макет седона"></a>
+          <a class="catalog-item-link" href="#"><img src="img/sedona.jpg" width="360" height="576"
+                                                     alt="макет седона"></a>
         </li>
         <li class="catalog-item">
-          <a href="#"><img src="img/pink.jpg" width="360" height="576" alt="макет пинк"></a>
+          <a class="catalog-item-link" href="#"><img src="img/pink.jpg" width="360" height="576" alt="макет пинк"></a>
         </li>
         <li class="catalog-item">
-          <a href="#"><img src="img/barbershop.jpg" width="360" height="576" alt="макет барбершоп"></a>
+          <a class="catalog-item-link" href="#"><img src="img/barbershop.jpg" width="360" height="576"
+                                                     alt="макет барбершоп"></a>
         </li>
         <li class="catalog-item">
-          <a href="#"><img src="img/mishka.jpg" width="360" height="576" alt="макет мишка"></a>
+          <a class="catalog-item-link" href="#"><img src="img/mishka.jpg" width="360" height="576"
+                                                     alt="макет мишка"></a>
         </li>
         <li class="catalog-item">
-          <a href="#"><img src="img/aplus.jpg" width="360" height="576" alt="макет аплюс"></a>
+          <a class="catalog-item-link" href="#"><img src="img/aplus.jpg" width="360" height="576" alt="макет аплюс"></a>
         </li>
         <li class="catalog-item">
-          <a href="#"><img src="img/kvast.jpg" width="360" height="576" alt="макет кваст"></a>
+          <a class="catalog-item-link" href="#"><img src="img/kvast.jpg" width="360" height="576" alt="макет кваст"></a>
         </li>
       </ul>
-      <section class="pagination"></section>
+      <ul class="pagination-list">
+        <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+        <li class="pagination-item"><a>2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">следующая</a></li>
+      </ul>
     </section>
   </div>
   <section class="catalog-map">
