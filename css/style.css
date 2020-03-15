@@ -10,6 +10,8 @@ body {
   line-height: 1.5;
   color: #283136;
   background-color: white;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 *, *::before, *::after {
@@ -348,6 +350,16 @@ input[type="radio"].visually-hidden {
   height: 1px;
 
   clip: rect(0, 0, 0, 0);
+}
+
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: -38px
+
+  width: 1160px;
+  height: 2px;
+  background-color: #eeeeee;
 }
 
 .about-us {
