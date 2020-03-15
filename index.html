@@ -26,17 +26,18 @@
   <input class="visually-hidden" type="radio" id="product-2" name="toggle">
   <input class="visually-hidden" type="radio" id="product-3" name="toggle">
   <section class="slider">
+    <h2 class="visually-hidden">слайдер</h2>
     <div class="slider-controls">
-      <label for="product-1"></label>
-      <label for="product-2"></label>
-      <label for="product-3"></label>
+      <label for="product-1" class="slider-control">первый слайдер</label>
+      <label for="product-2" class="slider-control">второй слайдер</label>
+      <label for="product-3" class="slider-control">третий слайдер</label>
     </div>
     <ul class="slider-list">
       <li class="slide" id="slide1">
         <h3 class="slide-title slide-title-first">
           Долго, дорого, скрупулезно.
         </h3>
-        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+        <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
         <a href="#">узнать больше</a>
       </li>
       <li class="slide" id="slide2">
@@ -100,7 +101,7 @@
       <div class="our-skills">
         <img src="img/nerds-picture.jpg" width="360" height="208" alt="картинка нёрдс">
         <p>с 2004 года любим точность во всем:</p>
-        <table>
+        <table class="characteristics">
           <thead>
           <tr>
             <th>Уровень самоотдачи</th>
@@ -110,9 +111,9 @@
           </thead>
           <tbody>
           <tr>
-            <td>146%</td>
-            <td>100%</td>
-            <td>50%</td>
+            <td>146<span class="sup">%</span></td>
+            <td>100<span class="sup">%</span></td>
+            <td>50<span class="sup">%</span></td>
           </tr>
           </tbody>
         </table>
@@ -122,24 +123,34 @@
       <h2 class="visually-hidden">реклама компаний</h2>
       <ul class="titles-list">
         <li><a href="#">
-          <img class="img-title" src="img/htmlacdemy-logo.png" width="199" height="68" alt="">
+          <img class="img-title" src="img/htmlacdemy-logo.png" width="199" height="68" alt="Бренд html академия">
         </a></li>
         <li><a href="#">
-          <img class="img-title borodinsli" src="img/borodinsli-logo.png" width="209" height="90" alt="">
+          <img class="img-title borodinsli" src="img/borodinsli-logo.png" width="209" height="90"
+               alt="Бренд бородински">
         </a></li>
         <li><a href="#">
-          <img class="img-title pink" src="img/pink-logo.png" width="185" height="52" alt="">
+          <img class="img-title pink" src="img/pink-logo.png" width="185" height="52" alt="Бренд пинк">
         </a></li>
         <li><a href="#">
-          <img class="img-title mishka" src="img/mishka-logo.png"  width="173" height="84" alt="">
+          <img class="img-title mishka" src="img/mishka-logo.png" width="173" height="84" alt="Бренд мишка">
         </a></li>
       </ul>
     </section>
   </div>
   <section class="main-page-map">
+    <h2 class="visually-hidden">как до нас добраться</h2>
     <a href="#"><img src="img/map.jpg" width="1440" height="416"
                      alt="Офис компании Нёрдс по адресу ул. Большая Конюшенная19/8, Санкт-Петербург"></a>
+    <section class="map-modal">
+      <h2>NЁRDS DESIGN STUDIO</h2>
+      <p>191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8</p>
+      <p>тел. +7 (812) 275-75-75</p>
+      <button>Напишите нам</button>
+    </section>
   </section>
+
 </main>
 <footer class="main-footer container">
   <ul class="footer-social">
@@ -158,27 +169,32 @@
     <p class="footer-offer">Скидка 10% для друзей из социальных сетей</p>
   </div>
 </footer>
-<section class="feedback-popup popup-window">
-  <h2 class="visually-hidden">Напишите нам</h2>
-  <form class="user" method="post" action="https://echo.htmlacademy.ru">
-    <div class="form-fields">
-      <p>
-        <label for="user-name">Ваше имя:</label>
-        <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="email">Ваш e-mail:</label>
-        <input id="email" type="email" name="email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label>Текст письма:
-          <textarea placeholder="В свободной форме"></textarea>
-        </label>
-      </p>
-    </div>
-    <button type="submit">отправить</button>
-  </form>
-  <button type="button"><span class="visually-hidden">закрыть</span></button>
+<div class="modal-container">
+<section class="modal feedback-modal">
+  <div class="feedback-modal-inner">
+    <h2>Напишите нам</h2>
+    <form class="user" method="post" action="https://echo.htmlacademy.ru">
+      <ul class="form-fields">
+        <li class="form-field">
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия" required>
+        </li>
+        <li class="form-field">
+          <label for="email">Ваш e-mail:</label>
+          <input id="email" type="email" name="email" placeholder="email@example.com" required>
+        </li>
+        <li class="form-field form-field-large">
+          <label for="text">Текст письма:</label>
+          <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+        </li>
+      </ul>
+      <button type="submit">отправить</button>
+    </form>
+    <button class="modal-close" type="button">
+     закрыть
+    </button>
+  </div>
 </section>
+</div>
 </body>
 </html>
