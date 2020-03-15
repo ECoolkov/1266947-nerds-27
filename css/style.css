@@ -10,8 +10,9 @@ body {
   line-height: 1.5;
   color: #283136;
   background-color: white;
-  max-width: 1440px;
-  margin: 0 auto;
+  /* for pixel-perfect */
+  /* max-width: 1440px;
+  margin: 0 auto; */
 }
 
 *, *::before, *::after {
