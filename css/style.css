@@ -62,10 +62,6 @@ input[type="radio"].visually-hidden {
   margin-right: 202px;
 }
 
-.main-header-logo:hover {
-  opacity: 80%;
-}
-
 .main-header-logo:active {
   opacity: 30%;
 }
@@ -123,6 +119,7 @@ input[type="radio"].visually-hidden {
   display: block;
 }
 
+
 .header-cart-link::before {
   content: "";
   position: absolute;
@@ -140,9 +137,10 @@ input[type="radio"].visually-hidden {
   vertical-align: middle;
 }
 
-.header-cart-link:not(hover):not(active):not(focus)::before {
+.header-cart-link::before {
   opacity: 30%;
 }
+
 
 .site-nav,
 .header-cart {
@@ -153,8 +151,6 @@ input[type="radio"].visually-hidden {
 .header-cart a {
   display: block;
   padding: 25px 0;
-  /*width: 74px;*/
-  /*height: 13px;*/
   font-size: 16px;
   font-weight: 500;
   font-stretch: normal;
@@ -310,9 +306,10 @@ input[type="radio"].visually-hidden {
   font-size: 0;
 }
 
-#product-1:checked ~ .slider #slide1,
-#product-2:checked ~ .slider #slide2,
-#product-3:checked ~ .slider #slide3 {
+
+#product-1:checked ~ .slider .slider-list .slide:nth-child(1),
+#product-2:checked ~ .slider .slider-list .slide:nth-child(2),
+#product-3:checked ~ .slider .slider-list .slide:nth-child(3) {
   display: block;
 }
 
@@ -336,6 +333,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-controls {
+  margin: 0;
+  padding: 0;
   position: absolute;
 
   left: 46%;
@@ -356,7 +355,7 @@ input[type="radio"].visually-hidden {
 .about-us::before {
   content: "";
   position: absolute;
-  top: -38px
+  top: -38px;
 
   width: 1160px;
   height: 2px;
@@ -552,8 +551,12 @@ input[type="radio"].visually-hidden {
   align-items: center;
 }
 
-.titles-list a:not(:hover):not(:focus) {
+.titles-list a:not(:hover):not(:focus):not(:active) {
   opacity: 20%;
+}
+
+.titles-list a:hover {
+  opacity: 1;
 }
 
 .img-title:active {
@@ -652,8 +655,9 @@ th {
   line-height: 1.13;
   text-align: center;
 
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 160px;
   height: 48px;
@@ -894,7 +898,6 @@ th {
   margin-bottom: 21px;
   width: 800px;
 
-
   display: flex;
   flex-wrap: wrap;
 
@@ -912,13 +915,24 @@ th {
   text-align: center;
 }
 
-.catalog-item-overlay h3 {
+.catalog-item-overlay a {
   margin: 0;
   padding: 0;
   margin-bottom: 14px;
   font-size: 18px;
   line-height: 1.67;
   text-transform: uppercase;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.catalog-item-overlay a:hover {
+  color: #fb565a;
+}
+
+.catalog-item-overlay a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog-item-overlay p {
@@ -929,19 +943,32 @@ th {
   line-height: 1.13;
 }
 
-.catalog-item-overlay button {
+.catalog-item-overlay p:last-of-type {
   margin: 0;
-  padding: 10px 15px;
+  padding: 0;
+  margin-left: 62px;
+
   border: none;
   border-radius: 2px;
   width: 200px;
-  min-height: 50px;
+  height: 50px;
   background-color: #fb565a;
   font: inherit;
   text-transform: uppercase;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.catalog-item-overlay p:last-of-type:hover {
+  background-color: #e74246;
+}
+
+.catalog-item-overlay p:last-of-type:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+}
 
 .catalog-item::before {
   content: "";
@@ -1352,6 +1379,11 @@ input[type="radio"] {
   opacity: 40%;
 }
 
+.filter-input-checkbox:disabled + label::after
+.filter-input-checkbox:disabled + label::before {
+  opacity: 30%;
+}
+
 .filter-input:disabled + label {
   color: rgba(40, 49, 54, 0.3);
   opacity: 0.1;
@@ -1451,6 +1483,28 @@ label {
   bottom: 145px;
 }
 
+.contacts-link {
+  width: 219px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.13;
+  text-transform: uppercase;
+  background-color: #fb565a;
+  color: white;
+  padding: 15px 40px;
+}
+
+.contacts-link:hover {
+  background-color: #e74246;
+} 
+
+.contacts-link:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .map-modal {
   width: 319px;
   height: 308px;
@@ -1522,7 +1576,6 @@ label {
   align-items: center;
 
   display: none;
-
 }
 
 .modal {
@@ -1531,7 +1584,6 @@ label {
 }
 
 .feedback-modal {
-  width: 960px;
 
   padding: 0 100px;
   padding-top: 70px;
@@ -1543,7 +1595,6 @@ label {
 }
 
 .modal-close {
-  font-size: 0;
   position: absolute;
   top: 0;
   right: 0;

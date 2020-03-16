@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="main-header">
@@ -21,45 +22,47 @@
     </ul>
   </nav>
 </header>
-<div class="sliders-wrapper">
-  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-  <section class="slider">
-    <h2 class="visually-hidden">слайдер</h2>
-    <div class="slider-controls">
-      <label for="product-1" class="slider-control">первый слайдер</label>
-      <label for="product-2" class="slider-control">второй слайдер</label>
-      <label for="product-3" class="slider-control">третий слайдер</label>
-    </div>
-    <ul class="slider-list">
-      <li class="slide" id="slide1">
-        <h3 class="slide-title slide-title-first">
-          Долго, дорого, скрупулезно.
-        </h3>
-        <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
-        <a href="#">узнать больше</a>
-      </li>
-      <li class="slide" id="slide2">
-        <h3 class="slide-title slide-title-second">
-          Любим математику как никто другой
-        </h3>
-        <p>Никакого креатива, только математические формулы
-          для расчета идеальных пропорций.</p>
-        <a href="#">узнать больше</a>
-      </li>
-      <li class="slide" id="slide3">
-        <h3 class="slide-title slide-title-third">
-          Только ночь, только хардкор
-        </h3>
-        <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-        <a href="#">узнать больше</a>
-      </li>
-    </ul>
-  </section>
-</div>
+
 <main>
   <h1 class="visually-hidden">нёрдс</h1>
+  <div class="sliders-wrapper">
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    
+    <section class="slider">
+      <h2 class="visually-hidden">слайдер</h2>
+      <ul class="slider-controls">
+        <label for="product-1" class="slider-control slider-control-first">первый слайдер</label>
+        <label for="product-2" class="slider-control slider-control-second">второй слайдер</label>
+        <label for="product-3" class="slider-control slider-control-third">третий слайдер</label>
+      </ul>
+      <ul class="slider-list">
+        <li class="slide first-slide">
+          <h3 class="slide-title slide-title-first">
+            Долго, дорого, скрупулезно.
+          </h3>
+          <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+          <a href="#">узнать больше</a>
+        </li>
+        <li class="slide second-slide" id="slide2">
+          <h3 class="slide-title slide-title-second">
+            Любим математику как никто другой
+          </h3>
+          <p>Никакого креатива, только математические формулы
+            для расчета идеальных пропорций.</p>
+          <a href="#">узнать больше</a>
+        </li>
+        <li class="slide third-slide" id="slide3">
+          <h3 class="slide-title slide-title-third">
+            Только ночь, только хардкор
+          </h3>
+          <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+          <a href="#">узнать больше</a>
+        </li>
+      </ul>
+    </section>
+    </div>
   <div class="container">
     <section class="services">
       <h2 class="visually-hidden">сервисы</h2>
@@ -142,13 +145,13 @@
     <h2 class="visually-hidden">как до нас добраться</h2>
     <a href="#"><img src="img/map.jpg" width="1440" height="416"
                      alt="Офис компании Нёрдс по адресу ул. Большая Конюшенная19/8, Санкт-Петербург"></a>
-    <section class="map-modal">
+    <div class="map-modal">
       <h2>NЁRDS DESIGN STUDIO</h2>
       <p>191186, Санкт-Петербург,<br>
         ул. Б. Конюшенная, д. 19/8</p>
       <p>тел. +7 (812) 275-75-75</p>
-      <button>Напишите нам</button>
-    </section>
+      <a class="contacts-link" href="writeus.html">Напишите нам</a>
+    </div>
   </section>
 
 </main>
@@ -191,7 +194,7 @@
       <button type="submit">отправить</button>
     </form>
     <button class="modal-close" type="button">
-     закрыть
+     <span class="visually-hidden">закрыть</span>
     </button>
   </div>
 </section>
